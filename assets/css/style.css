@@ -37,8 +37,9 @@ button:focus, input:focus {
 
 
 .loading-wrapper {
-    left: 50%;
-    margin-left: -50px;
+   left: 50%;
+    margin-left: -101px;
+	margin-top: -92px;
     position: fixed;
     top: 50%;
     
@@ -51,10 +52,10 @@ button:focus, input:focus {
 
 .content-block-wrapper {
     left: 50%;
-    margin-left: -113px;
+    margin-left: -101px;
+	margin-top: -199px;
     position: fixed;
-    top: 19%;
-    
+    top: 50%;
 }
 .content-block-icon {
     height: 100px;
@@ -146,9 +147,3 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-/**media query **/
-@media screen and (min-width: 768px) and (max-width: 1024px){
-	.loading-wrapper {
-    top: 30%;
-    }
-}
