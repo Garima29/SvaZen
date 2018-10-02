@@ -29,47 +29,51 @@
 									<div class="registration-block">
 										<div id="phoneNumberBlock" class="">
 												<h6>Enter mobile number</h6>
-
-												<div class="phone-field">
-													<input class="phone-input" id="1" name="phone-input" type="tel" size="1" maxlength="1" autofocus="autofocus" >
-														<input class="phone-input" id="2"  name="phone-input" type="tel" size="1" maxlength="1">
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1">
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1">
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-														<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
+												<span class="help-block"></span>
+												<form action="#">
+												<div class="number-field">
+													<input class="phone-input js-number-validation" id="1" name="phone-input" type="tel" size="1" maxlength="1" autofocus="autofocus" >
+														<input class="phone-input js-number-validation" id="2"  name="phone-input" type="tel" size="1" maxlength="1">
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1">
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1">
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
+														<input class="phone-input js-number-validation" name="phone-input" type="tel" size="1" maxlength="1" >
 														
 												</div>
 												<div>
-													<button type="submit" value="Submit" id="phoneNumberSubmit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+													<button type="button" id="phoneNumberSubmit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 												</div>
+												</form>
 										</div>
 										
 										<div id="usernameBlock" class="d-none">
 											<h6>Enter your name</h6>
+											<span class="help-block"></span>
 												<div class="username-field">
 													<input class="username" name="username" type="text">
 													<div >
-														<button type="submit" value="Submit" id="backToPhoneNumber"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-														<button type="submit" value="Submit" id="usernameSubmit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+														<button type="button" value="Submit" id="backToPhoneNumber"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+														<button type="button" value="Submit" id="usernameSubmit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 													</div>
 												</div>
 										</div>
 										
 										<div id="otpBlock" class="d-none">
 											<h6>Enter OTP</h6>
-												<div class="phone-field">
-													<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" autofocus="autofocus" >
-													<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-													<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1" >
-													<input class="phone-input" name="phone-input" type="tel" size="1" maxlength="1">
+											<span class="help-block"></span>
+												<div class="number-field">
+													<input class="otp-input js-number-validation" name="otp-input" type="tel" size="1" maxlength="1" autofocus="autofocus" >
+													<input class="otp-input js-number-validation" name="otp-input" type="tel" size="1" maxlength="1" >
+													<input class="otp-input js-number-validation" name="otp-input" type="tel" size="1" maxlength="1" >
+													<input class="otp-input js-number-validation" name="otp-input" type="tel" size="1" maxlength="1">
 												</div>
 												<div>
-													<button type="submit" value="Submit" id="backToUsername"><i class="fa fa-arrow-left"aria-hidden="true"></i></button>
-													<button type="submit" value="Submit" id="otpSubmit"><i class="fa fa-arrow-right"aria-hidden="true"></i></button>
+													<button type="button" value="Submit" id="backToUsername"><i class="fa fa-arrow-left"aria-hidden="true"></i></button>
+													<button type="button" value="Submit" id="otpSubmit"><i class="fa fa-arrow-right"aria-hidden="true"></i></button>
 												</div>
 												<div class="">
 													Resend OTP

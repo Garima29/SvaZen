@@ -52,7 +52,7 @@ button:focus, input:focus {
 
 .content-block-wrapper {
     left: 50%;
-    margin-left: -101px;
+    margin-left: -112px;
 	margin-top: -199px;
     position: fixed;
     top: 50%;
@@ -67,15 +67,15 @@ button:focus, input:focus {
 	padding: 4rem;
 }
 
-.phone-field {
+.number-field {
   margin: 13px auto;
   font-size: 20px;
 }
-#otpBlock .phone-field {
+#otpBlock .number-field {
 	width:219px;
 }
 
-.phone-input {
+.phone-input, .otp-input {
 	color: #4e4e4e;
     font-weight: 700;
   width: 13px;
@@ -92,7 +92,7 @@ button:focus, input:focus {
 
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.0s ease;
-  opacity: 0;
+  opacity: 0; 
 }
 
 .registration-block button{

@@ -11,7 +11,7 @@ SZ.RegistrationView.prototype = {
 	},
 	validation: function(){
 		var self = this;
-		$('.phone-input').keypress(function(e){
+		$('.js-number-validation').keydown(function(e){
 			if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
                return false;
 			}
@@ -24,13 +24,13 @@ SZ.RegistrationView.prototype = {
 	},
 	multipleInputNumberValidation: function(){
 		var self = this;
-		$('body').on('keyup', 'input.phone-input', function()
+		console.log("multiple");
+		$('body').on('keyup', 'input.js-number-validation', function()
 		{
-			
-			console.log("12221");
 		  var key = event.keyCode || event.charCode;
-		  var inputs = $('input.phone-input');
-		  if(($(this).val().length === this.size) && key != 32) 
+		
+		  var inputs = $('input.js-number-validation');
+		  if(($(this).val().length === this.size) && key != 32 ) 
 		  {
 			inputs.eq(inputs.index(this) + 1).focus();  
 		  } 
@@ -47,18 +47,14 @@ SZ.RegistrationView.prototype = {
 		
 	},
 	registrationProcess: function(){
+		var self=this;
 		console.log("reg");
+		self.handlePhoneNumberSubmission();
+		self.handleNameSubmission();
+		self.handleOtpSubmission();
 		
-		$('#phoneNumberSubmit').click(function(){
-			$('#phoneNumberBlock').addClass('d-none');
-			$('#usernameBlock').removeClass('d-none');
-		});
-		$('#usernameSubmit').click(function(){
-			$('#phoneNumberBlock').addClass('d-none');
-			$('#usernameBlock').addClass('d-none');
-			$('#otpBlock').removeClass('d-none');
-		});
 		$('#backToPhoneNumber').click(function(){
+			$('.help-block').html('');
 			$('#phoneNumberBlock').removeClass('d-none');
 			$('#usernameBlock').addClass('d-none');
 			$('#otpBlock').addClass('d-none');
@@ -69,7 +65,97 @@ SZ.RegistrationView.prototype = {
 		})
 		
 	},
+	handlePhoneNumberSubmission: function(){
+		$('.phone-input').on('keyup',function(e){
+			console.log("change color");
+			var reqlength = $('.phone-input').length;
+			console.log(reqlength);
+			var value = $('.phone-input').filter(function () {
+				return this.value != '';
+			});
 
+			if (value.length>=0 && (value.length !== reqlength)) {
+				console.log("red");
+				$('#phoneNumberSubmit i').css("color","white");
+			} else {
+				console.log("green");
+				$('#phoneNumberBlock .help-block').html('');
+				$('#phoneNumberSubmit i').css("color","green");
+			}
+		});
+		$('#phoneNumberSubmit').click(function(e){
+			e.preventDefault();
+			var reqlength = $('.phone-input').length;
+			console.log(reqlength);
+			var value = $('.phone-input').filter(function () {
+				return this.value != '';
+			});
+
+			if (value.length>=0 && (value.length !== reqlength)) {
+				$('#phoneNumberBlock .help-block').html("Please fill the fields");
+				
+			} else {
+				$('#phoneNumberBlock').addClass('d-none');
+				$('#usernameBlock').removeClass('d-none');
+			}
+		});
+	},
+	handleNameSubmission: function(){
+		$('.username').on('keyup',function(){
+			if($('.username').val() == ''){
+				$('#usernameSubmit i').css("color","white");
+			}else{
+				$('#usernameSubmit i').css("color","green");
+			}
+		});
+		
+		$('#usernameSubmit').click(function(e){
+			e.preventDefault();
+			if($('.username').val() == ''){
+				$('#usernameBlock .help-block').html("Please fill the fields");
+			}else{
+				$('#usernameBlock .help-block').html('');
+				$('#phoneNumberBlock').addClass('d-none');
+				$('#usernameBlock').addClass('d-none');
+				$('#otpBlock').removeClass('d-none');
+			}
+		})
+	},
+	handleOtpSubmission: function(){
+		$('.otp-input').on('keyup',function(e){
+			console.log("change color");
+			var reqlength = $('.otp-input').length;
+			console.log(reqlength);
+			var value = $('.otp-input').filter(function () {
+				return this.value != '';
+			});
+
+			if (value.length>=0 && (value.length !== reqlength)) {
+				console.log("red");
+				$('#otpSubmit i').css("color","white");
+			} else {
+				console.log("green");
+				$('#otpBlock .help-block').html('');
+				$('#otpSubmit i').css("color","green");
+			}
+		});
+		$('#otpSubmit').click(function(e){
+			e.preventDefault();
+			var reqlength = $('.otp-input').length;
+			console.log(reqlength);
+			var value = $('.otp-input').filter(function () {
+				return this.value != '';
+			});
+
+			if (value.length>=0 && (value.length !== reqlength)) {
+				$('#otpBlock .help-block').html("Please fill the fields");
+			} else {
+				$('.help-block').html('');
+				
+			}
+		})
+	}
+	
 }
 
 jQuery(document).ready(function () {
