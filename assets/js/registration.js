@@ -18,6 +18,14 @@ SZ.RegistrationView.prototype = {
 			else{
 				self.multipleInputNumberValidation();
 			}
+		});
+		$('.js-name-validation').keydown(function(e){
+			if (event.keyCode >= 65 && event.keyCode <= 90) {
+               
+			}
+			else{
+				return false;
+			}
 		})
 		
        
