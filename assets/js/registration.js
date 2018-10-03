@@ -94,7 +94,7 @@ SZ.RegistrationView.prototype = {
 			}
 		});
 		$('#phoneNumberSubmit').click(function(e){
-			e.preventDefault();
+			
 			var reqlength = $('.phone-input').length;
 			console.log(reqlength);
 			var value = $('.phone-input').filter(function () {
@@ -126,7 +126,7 @@ SZ.RegistrationView.prototype = {
 		});
 		
 		$('#usernameSubmit').click(function(e){
-			e.preventDefault();
+			
 			if($('.username').val() == ''){
 				$('#usernameBlock .help-block').html("Please fill the fields");
 			}else{
@@ -155,7 +155,6 @@ SZ.RegistrationView.prototype = {
 			}
 		});
 		$('#otpSubmit').click(function(e){
-			e.preventDefault();
 			var reqlength = $('.otp-input').length;
 			console.log(reqlength);
 			var value = $('.otp-input').filter(function () {
