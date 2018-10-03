@@ -141,5 +141,8 @@ button:focus, input:focus {
 	
   overflow:hidden
 }
-
+#resendOtp a{
+	text-decoration: underline;
+	text-decoration-color: #ea5655;
+}
 

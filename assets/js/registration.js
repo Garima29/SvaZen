@@ -20,7 +20,7 @@ SZ.RegistrationView.prototype = {
 			}
 		});
 		$('.js-name-validation').keydown(function(e){
-			if (event.keyCode >= 65 && event.keyCode <= 90) {
+			if (e.which == 8 || e.which == 0 || event.keyCode >= 65 && event.keyCode <= 90) {
                
 			}
 			else{
@@ -119,6 +119,7 @@ SZ.RegistrationView.prototype = {
 		});
 	},
 	handleNameSubmission: function(){
+		var self=this;
 		$('.username').on('keyup',function(){
 			if($('.username').val() == ''){
 				$('#usernameSubmit').removeClass("enable-button");
@@ -130,7 +131,6 @@ SZ.RegistrationView.prototype = {
 		});
 		
 		$('#usernameSubmit').click(function(e){
-			
 			if($('.username').val() == ''){
 				$('#usernameBlock .help-block').html("Please fill the fields");
 			}else{
@@ -138,6 +138,7 @@ SZ.RegistrationView.prototype = {
 				$('#phoneNumberBlock').addClass('d-none');
 				$('#usernameBlock').addClass('d-none');
 				$('#otpBlock').removeClass('d-none');
+				self.fadeInOtp();
 			}
 		})
 	},
@@ -179,9 +180,13 @@ SZ.RegistrationView.prototype = {
 				$('.help-block').html('');
 				
 			}
-		})
+		});
+	},
+	fadeInOtp: function(){
+		
+		$('#resendOtp').hide().delay(2000).fadeIn(5000);
+		
 	}
-	
 }
 
 jQuery(document).ready(function () {
