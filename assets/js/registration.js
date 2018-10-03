@@ -86,11 +86,13 @@ SZ.RegistrationView.prototype = {
 
 			if (value.length>=0 && (value.length !== reqlength)) {
 				console.log("red");
-				$('#phoneNumberSubmit i').css("color","white");
+				$('#phoneNumberSubmit').addClass("disable-button");
+				$('#phoneNumberSubmit').addClass("enable-button");
 			} else {
 				console.log("green");
 				$('#phoneNumberBlock .help-block').html('');
-				$('#phoneNumberSubmit i').css("color","green");
+				$('#phoneNumberSubmit').removeClass("disable-button");
+				$('#phoneNumberSubmit').addClass("enable-button");
 			}
 		});
 		$('#phoneNumberSubmit').click(function(e){
@@ -119,9 +121,11 @@ SZ.RegistrationView.prototype = {
 	handleNameSubmission: function(){
 		$('.username').on('keyup',function(){
 			if($('.username').val() == ''){
-				$('#usernameSubmit i').css("color","white");
+				$('#usernameSubmit').removeClass("enable-button");
+				$('#usernameSubmit').addClass("disable-button");
 			}else{
-				$('#usernameSubmit i').css("color","green");
+				$('#usernameSubmit').removeClass("disable-button");
+				$('#usernameSubmit').addClass("enable-button");
 			}
 		});
 		
@@ -147,11 +151,13 @@ SZ.RegistrationView.prototype = {
 			});
 
 			if (value.length>=0 && (value.length !== reqlength)) {
-				$('#otpSubmit i').css("color","white");
+				$('#otpSubmit').removeClass("enable-button");
+				$('#otpSubmit').addClass("disable-button");
 			} else {
 				console.log("green");
 				$('#otpBlock .help-block').html('');
-				$('#otpSubmit i').css("color","green");
+				$('#otpSubmit').removeClass("disable-button");
+				$('#otpSubmit').addClass("enable-button");
 			}
 		});
 		$('#otpSubmit').click(function(e){
