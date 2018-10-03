@@ -40,6 +40,7 @@ SZ.RegistrationView.prototype = {
 		  var inputs = $('input.js-number-validation');
 		  if(($(this).val().length === this.size) && key != 32 ) 
 		  {
+			  $(this).css("border-color","grey");
 			inputs.eq(inputs.index(this) + 1).focus();  
 		  } 
 		  if( key == 8 || key == 46 )
@@ -47,6 +48,7 @@ SZ.RegistrationView.prototype = {
 			var indexNum = inputs.index(this);
 			if(indexNum != 0)
 			{
+			$(this).css("border-color","#dddada");
 			inputs.eq(inputs.index(this) - 1).val('').focus();
 			}
 		  }
@@ -100,6 +102,12 @@ SZ.RegistrationView.prototype = {
 			});
 
 			if (value.length>=0 && (value.length !== reqlength)) {
+				$('input').each(function(){
+					if($(this).val() == ''){
+						$(this).css("border-color","#ea5655");
+					return false;
+					}
+				});
 				$('#phoneNumberBlock .help-block').html("Please fill the fields");
 				
 			} else {
@@ -139,7 +147,6 @@ SZ.RegistrationView.prototype = {
 			});
 
 			if (value.length>=0 && (value.length !== reqlength)) {
-				console.log("red");
 				$('#otpSubmit i').css("color","white");
 			} else {
 				console.log("green");
@@ -156,6 +163,12 @@ SZ.RegistrationView.prototype = {
 			});
 
 			if (value.length>=0 && (value.length !== reqlength)) {
+				$('input').each(function(){
+					if($(this).val() == ''){
+						$(this).css("border-color","#ea5655");
+					return false;
+					}
+				});
 				$('#otpBlock .help-block').html("Please fill the fields");
 			} else {
 				$('.help-block').html('');

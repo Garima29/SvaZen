@@ -76,7 +76,7 @@ button:focus, input:focus {
 }
 
 .phone-input, .otp-input {
-	color: #4e4e4e;
+	color: #ea5655;
     font-weight: 700;
   width: 13px;
   text-align: center;
@@ -85,14 +85,9 @@ button:focus, input:focus {
   border: 0;
   outline: 0;
   background: transparent;
-  border-bottom: 2px solid #e95655;
+  border-bottom: 2px solid #dddada;
   margin-right: 2px;
   margin-left: 2px;
-}
-
-[placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s 0.0s ease;
-  opacity: 0; 
 }
 
 .registration-block button{
@@ -141,9 +136,5 @@ button:focus, input:focus {
 	
   overflow:hidden
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
+
 
