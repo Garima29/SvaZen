@@ -185,7 +185,8 @@ SZ.RegistrationView.prototype = {
 				$('#otpBlock .help-block').html("Please fill the fields");
 			} else {
 				$('.help-block').html('');
-				
+				$('#otpBlock').addClass('d-none');
+				$('#languageBlock').removeClass('d-none');
 			}
 		});
 	},
