@@ -8,6 +8,7 @@ SZ.RegistrationView.prototype = {
     initialize : function(){
 		this.validation();
 		this.registrationProcess();
+		
 	},
 	validation: function(){
 		var self = this;
@@ -87,12 +88,14 @@ SZ.RegistrationView.prototype = {
 			if (value.length>=0 && (value.length !== reqlength)) {
 				console.log("red");
 				$('#phoneNumberSubmit').addClass("disable-button");
-				$('#phoneNumberSubmit').addClass("enable-button");
+				$('#phoneNumberSubmit').removeClass("enable-button");
+				$('#phoneNumberSubmit').removeClass("shadow");
 			} else {
 				console.log("green");
 				$('#phoneNumberBlock .help-block').html('');
 				$('#phoneNumberSubmit').removeClass("disable-button");
 				$('#phoneNumberSubmit').addClass("enable-button");
+				$('#phoneNumberSubmit').addClass("shadow");
 			}
 		});
 		$('#phoneNumberSubmit').click(function(e){
@@ -122,11 +125,13 @@ SZ.RegistrationView.prototype = {
 		var self=this;
 		$('.username').on('keyup',function(){
 			if($('.username').val() == ''){
+				$('#usernameSubmit').removeClass("shadow");
 				$('#usernameSubmit').removeClass("enable-button");
 				$('#usernameSubmit').addClass("disable-button");
 			}else{
 				$('#usernameSubmit').removeClass("disable-button");
 				$('#usernameSubmit').addClass("enable-button");
+				$('#usernameSubmit').addClass("shadow");
 			}
 		});
 		
@@ -152,6 +157,7 @@ SZ.RegistrationView.prototype = {
 			});
 
 			if (value.length>=0 && (value.length !== reqlength)) {
+				$('#otpSubmit').removeClass("shadow");
 				$('#otpSubmit').removeClass("enable-button");
 				$('#otpSubmit').addClass("disable-button");
 			} else {
@@ -159,6 +165,7 @@ SZ.RegistrationView.prototype = {
 				$('#otpBlock .help-block').html('');
 				$('#otpSubmit').removeClass("disable-button");
 				$('#otpSubmit').addClass("enable-button");
+				$('#otpSubmit').addClass("shadow");
 			}
 		});
 		$('#otpSubmit').click(function(e){
@@ -187,6 +194,7 @@ SZ.RegistrationView.prototype = {
 		$('#resendOtp').hide().delay(2000).fadeIn(5000);
 		
 	}
+	
 }
 
 jQuery(document).ready(function () {

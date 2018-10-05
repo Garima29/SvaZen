@@ -91,18 +91,18 @@ button:focus, input:focus {
 }
 
 .enable-button{
-    background: radial-gradient(#f59392 23%, #ea5655 83%);
+    background: #ea5655;
     border: 2px solid #ea5755ad;
 }
 .disable-button{
-	background: radial-gradient(#cecdcd 23%, #dddada 83%);
+	background: #dddada;
     border: 2px solid #bfbfbf;
 }
-.registration-block button{
+/**.registration-block button{
 	margin: auto 6px;
     border-radius: 50%;
     padding: 0.7rem 0.9rem;
-}
+}**/
 
 .registration-block button i{
     font-size: 18px;
@@ -114,7 +114,7 @@ button:focus, input:focus {
 	width: 219px;
 	border: none;
     border-bottom: 2px solid #e95655;
-    margin: 7px 0 13px 0;
+    margin: 17px 0 13px 0;
 }
 
 
@@ -145,4 +145,45 @@ button:focus, input:focus {
 	text-decoration: underline;
 	text-decoration-color: #ea5655;
 }
+::-webkit-input-placeholder { 
+	text-align:center;
+	font-weight: 100;
+	color: #bfbfbf
+	}
+/* mozilla solution */
+input:-moz-placeholder { text-align:center; }
+button {
+  position: relative;
+  display:inline-block;
+  height: 45px;
+  width: 88px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         3.08s ease-in;
+  -o-transition:      3.08s ease-in;
+  -ms-transition:     3.08s ease-in;
+  -moz-transition:    3.08s ease-in;
+  -webkit-transition: 3.08s ease-in;
+}
 
+button i {
+	padding-left: 7px;
+}
+
+.shadow {
+   -moz-box-shadow:    4px 4px 10px #0000002e;
+   -webkit-box-shadow: 4px 4px 10px #0000002e;
+   box-shadow:         4px 4px 10px #0000002e;
+}
