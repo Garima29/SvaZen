@@ -17,11 +17,16 @@ h6 {
 a{
 	color: #929090;
 }
-
-button:focus, input:focus {
+.username:focus{
 	outline: none;
 }
-
+@keyframes blink { 
+   50% { border:1px solid #ea5755; } 
+}
+.phone-input:focus, .otp-input:focus  {
+	outline: none;
+	 animation: blink .5s step-end infinite alternate; 
+	}
 
 .content-block {
 	background-color: white;
@@ -76,7 +81,8 @@ button:focus, input:focus {
 }
 
 .phone-input, .otp-input {
-	color: #ea5655;
+	color: transparent;
+	text-shadow: 0 0 0 #ea5655;
     font-weight: 700;
   width: 13px;
   text-align: center;
@@ -148,7 +154,7 @@ button:focus, input:focus {
 ::-webkit-input-placeholder { 
 	text-align:center;
 	font-weight: 100;
-	color: #bfbfbf
+	color: #dddada;
 	}
 /* mozilla solution */
 input:-moz-placeholder { text-align:center; }

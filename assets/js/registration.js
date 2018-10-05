@@ -109,7 +109,7 @@ SZ.RegistrationView.prototype = {
 			if (value.length>=0 && (value.length !== reqlength)) {
 				$('input').each(function(){
 					if($(this).val() == ''){
-						$(this).css("border-color","#ea5655");
+						$(this).focus();
 					return false;
 					}
 				});
@@ -178,7 +178,7 @@ SZ.RegistrationView.prototype = {
 			if (value.length>=0 && (value.length !== reqlength)) {
 				$('input').each(function(){
 					if($(this).val() == ''){
-						$(this).css("border-color","#ea5655");
+						$(this).focus();
 					return false;
 					}
 				});
