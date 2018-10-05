@@ -190,11 +190,11 @@ button {
   background: none;
   z-index: 1;
   cursor: pointer;
-  transition:         3.08s ease-in;
-  -o-transition:      3.08s ease-in;
-  -ms-transition:     3.08s ease-in;
-  -moz-transition:    3.08s ease-in;
-  -webkit-transition: 3.08s ease-in;
+  transition:         1s ease-in;
+  -o-transition:      1s ease-in;
+  -ms-transition:     1s ease-in;
+  -moz-transition:    1s ease-in;
+  -webkit-transition: 1s ease-in;
 }
 
 button i {
