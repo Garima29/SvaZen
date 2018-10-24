@@ -3,9 +3,33 @@ html, body {
 }
 body {
 	background-color: #f9f9f9;
+	font-family: sans-serif;
 }
-header {
-	text-align: center;
+i span{
+	font-family: sans-serif;
+}
+header{
+	position: sticky;
+	top: 0;
+    width: 100%;
+	left:0;
+	right:0;
+	    z-index: 2;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left:0;
+	right:0;
+}
+#discoverContentBlock {
+	padding-bottom: 38px;
+}
+.btn-svazen{
+	background: #ea5655;
+    border: 2px solid #ea5755ad;
+	color:white;
 }
 
 h6 {
@@ -13,9 +37,22 @@ h6 {
     margin: 10px auto;
     font-weight: 600;
 }
-
 a{
-	color: #929090;
+	/* color: #929090; */
+	color: #3c3c3c;
+}
+a:hover {
+	text-decoration:none;
+	color: #ffffff;
+}
+a:focus {
+    outline: none;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.pd-0{
+	padding:0px;
 }
 
 #languageBlock button {
@@ -43,13 +80,14 @@ a{
 
 .content-block {
 	background-color: white;
-	padding: 1.5rem 0; 
-	height: 100vh;
 	margin: auto;
+	padding-bottom: 60px;
 }
 
 .content-block header {
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem 0.5rem;
+	background-color: #eb5a5a;
+	color:white;
 	
 }
 
@@ -206,3 +244,87 @@ button i {
    -webkit-box-shadow: 4px 4px 10px #0000002e;
    box-shadow:         4px 4px 10px #0000002e;
 }
+/*discover-page-start*/
+.pd-15{
+	padding:15px 0;
+}
+.pd-bottom-5{
+	padding-bottom: 5px;
+}
+.pd-rl-5{
+	padding: 0 5px;
+}
+
+
+#discoverPage #topHeader{
+	text-align:center;
+}
+
+#discoverPage #bottomHeader{
+	background-color: #bf4848;
+    border-radius: 10px;
+}
+
+#discoverPage #bottomHeader .user-name{
+	margin: 5px auto;
+}
+
+#discoverPage #bottomHeader, #topHeader{
+	padding: 9px;
+}
+
+#discoverPage #topHeader i, #bottomHeader i{
+	padding: 2px 5px;
+	font-size: 31px;
+}
+#discoverPage #topHeader .header-title{
+	font-size: 19px;
+} 
+.cartegories {
+	background-color: #eb5a5a;
+	padding: 9px 16px;
+	border-radius: 6px;
+}
+.cartegories .cartegory-btn {
+	border-right:1px solid white;
+    font-size: 15px;
+}
+.cartegories a {
+	color:white;
+}
+
+.cartegory-item .cartegory-item-image img{
+	box-shadow: 0 0 0 8px #eb5a5a;
+    width: 100px;
+    height: 100px;
+    margin: 12px 0;
+	object-fit: cover;
+}
+.cartegory-item{
+	border-radius: 20px;
+     /* margin-top: 34px; */
+    padding: 17px 0px;
+    box-shadow: inset 0 0 6px #82828257;
+	-moz-box-shadow: inset 0 0 6px #82828257;
+   -webkit-box-shadow: inset 0 0 6px #82828257;
+}
+#cartegories .cartegories-arrow {
+	position: relative;
+    top: 12px;
+}
+
+/*discover-page-end*/
+/*footer start*/
+#footerMenu{
+	background-color: #eb5a5a;
+}
+#footerMenu .footer-button{
+	padding: 12px 0;
+}
+#footerMenu .active{
+	background-color: #bf4848;
+}
+#footerMenu i{
+	color:white;
+}
+/*footer end*/
